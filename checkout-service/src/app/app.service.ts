@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import Consul from 'consul';
-import consul from 'consul';
 @Injectable()
 export class AppService {
   private consul = new Consul({
