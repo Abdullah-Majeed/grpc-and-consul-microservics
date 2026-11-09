@@ -1,0 +1,23 @@
+{
+  "name": "checkout-service-e2e",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "implicitDependencies": [
+    "checkout-service"
+  ],
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "command": "jest --passWithNoTests",
+      "options": {
+        "cwd": "checkout-service-e2e"
+      },
+      "outputs": [
+        "{workspaceRoot}/coverage/{e2eProjectRoot}"
+      ],
+      "dependsOn": [
+        "checkout-service:build",
+        "checkout-service:serve"
+      ]
+    }
+  }
+}
